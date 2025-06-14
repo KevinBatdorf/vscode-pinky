@@ -1,9 +1,14 @@
 {
   "name": "vscode-pinky",
-  "displayName": "vscode-pinky",
+  "displayName": "Pinky Syntax Highlighter",
   "description": "A syntax highlighter for the pinky programming language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "icon.png",
+  "publisher": "kevinbatdorf",
+  "pricing": "Free",
+  "sponsor": {
+    "url": "https://github.com/sponsors/KevinBatdorf"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/KevinBatdorf/vscode-pinky.git"
