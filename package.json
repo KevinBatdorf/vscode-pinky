@@ -1,0 +1,45 @@
+{
+  "name": "vscode-pinky",
+  "displayName": "vscode-pinky",
+  "description": "A syntax highlighter for the pinky programming language",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinBatdorf/vscode-pinky.git"
+  },
+  "keywords": [
+    "pinky",
+    "syntax",
+    "highlighting",
+    "language"
+  ],
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pinky",
+        "aliases": [
+          "Pinky",
+          "pinky"
+        ],
+        "extensions": [
+          ".pinky"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pinky",
+        "scopeName": "source.pinky",
+        "path": "./syntaxes/pinky.tmLanguage.json"
+      }
+    ]
+  }
+}
