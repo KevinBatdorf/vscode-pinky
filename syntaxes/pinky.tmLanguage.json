@@ -6,6 +6,7 @@
     { "include": "#keywords" },
     { "include": "#builtins" },
     { "include": "#functions" },
+    { "include": "#functionInvocations" },
     { "include": "#variables" },
     { "include": "#operators" },
     { "include": "#numbers" },
@@ -41,6 +42,14 @@
         {
           "name": "entity.name.function.pinky",
           "match": "(?<=\\bfunc\\s+)\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    },
+    "functionInvocations": {
+      "patterns": [
+        {
+          "name": "entity.name.function.call.pinky",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
         }
       ]
     },
