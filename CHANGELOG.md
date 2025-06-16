@@ -4,6 +4,14 @@ All notable changes to the "vscode-pinky" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.0.5] - 2025-06-16
+
+- Uses default scopes now
+- Removed duplicate matching
+- Added folding markers and auto detection
+- Improved number matching
+- Now matches parameters before variables
+
 ## [1.0.4] - 2025-06-15
 
 - Add function params
