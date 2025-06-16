@@ -7,7 +7,9 @@
   -----------------------------------------------
   func max(a, b)
     if a > b then
-      ret a
+      for i := 0, 10 do
+        print(i)
+      end
     end
     ret b
   end
@@ -37,4 +39,4 @@
     end
   end
 
-  main()
+  main(1, 2.00)

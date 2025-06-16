@@ -1,13 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "pinky",
+  "scopeName": "source.pinky",
+  "firstLineMatch": "^#!.*\\bpinky\\b",
+  "foldingStartMarker": "\\b(func|for|while|if)\\b",
+  "foldingStopMarker": "\\bend\\b",
   "patterns": [
     { "include": "#comments" },
+    { "include": "#punctuation" },
     { "include": "#keywords" },
-    { "include": "#builtins" },
     { "include": "#functions" },
     { "include": "#parameters" },
     { "include": "#functionInvocations" },
+    { "include": "#assignmentTargets" },
     { "include": "#variables" },
     { "include": "#operators" },
     { "include": "#numbers" },
@@ -17,23 +22,48 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.double-dash.pinky",
+          "name": "comment.line.double-dash",
           "match": "--.*$"
         }
       ]
     },
-    "keywords": {
+    "punctuation": {
       "patterns": [
         {
-          "name": "keyword.control.pinky",
-          "match": "\\b(if|else if|else|then|else|true|false|and|or|while|do|for|func|end|ret|local)\\b"
+          "name": "punctuation.separator.comma",
+          "match": ","
+        },
+        {
+          "name": "punctuation.section.group.begin",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.section.group.end",
+          "match": "\\)"
         }
       ]
     },
-    "builtins": {
+
+    "keywords": {
       "patterns": [
         {
-          "name": "support.function.builtin.pinky",
+          "name": "keyword.control",
+          "match": "\\b(if|then|else|while|do|for|end|ret)\\b"
+        },
+        {
+          "name": "storage.type.function",
+          "match": "\\bfunc\\b"
+        },
+        {
+          "name": "constant.language",
+          "match": "\\b(true|false)\\b"
+        },
+        {
+          "name": "keyword.operator.logical",
+          "match": "\\b(and|or)\\b"
+        },
+        {
+          "name": "support.function",
           "match": "\\b(print|println)\\b"
         }
       ]
@@ -41,7 +71,7 @@
     "functions": {
       "patterns": [
         {
-          "name": "entity.name.function.pinky",
+          "name": "entity.name.function",
           "match": "(?<=\\bfunc\\s+)\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
         }
       ]
@@ -49,7 +79,7 @@
     "parameters": {
       "patterns": [
         {
-          "name": "variable.parameter.pinky",
+          "name": "variable.parameter",
           "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*(,|\\)))"
         }
       ]
@@ -57,23 +87,31 @@
     "functionInvocations": {
       "patterns": [
         {
-          "name": "entity.name.function.call.pinky",
+          "name": "entity.name.function.call",
           "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+        }
+      ]
+    },
+    "assignmentTargets": {
+      "patterns": [
+        {
+          "name": "variable.other.assignment",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*:=)"
         }
       ]
     },
     "variables": {
       "patterns": [
         {
-          "name": "variable.other.assignment.pinky",
-          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*:=)"
+          "name": "variable.other",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
         }
       ]
     },
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.pinky",
+          "name": "keyword.operator",
           "match": ":=|~=|==|<=|>=|<|>|\\+|-|\\*|/|%|\\^|~"
         }
       ]
@@ -81,7 +119,7 @@
     "numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.pinky",
+          "name": "constant.numeric",
           "match": "\\b\\d+(\\.\\d+)?\\b"
         }
       ]
@@ -89,29 +127,28 @@
     "strings": {
       "patterns": [
         {
-          "name": "string.quoted.double.pinky",
+          "name": "string.quoted.double",
           "begin": "\"",
           "end": "\"",
           "patterns": [
             {
-              "name": "constant.character.escape.pinky",
+              "name": "constant.character.escape",
               "match": "\\\\."
             }
           ]
         },
         {
-          "name": "string.quoted.single.pinky",
+          "name": "string.quoted.single",
           "begin": "'",
           "end": "'",
           "patterns": [
             {
-              "name": "constant.character.escape.pinky",
+              "name": "constant.character.escape",
               "match": "\\\\."
             }
           ]
         }
       ]
     }
-  },
-  "scopeName": "source.pinky"
+  }
 }
