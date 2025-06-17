@@ -4,6 +4,12 @@ All notable changes to the "vscode-pinky" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.0.6] - 2025-06-17
+
+- Updated the description to refer to Pinky as a scripting language
+- Added a link to the official Pinky website in the description
+- Updated the screenshot to include more diverse tokens
+
 ## [1.0.5] - 2025-06-16
 
 - Uses default scopes now
