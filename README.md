@@ -1,6 +1,8 @@
 # vscode-pinky
 
-A syntax highlighter for the Pinky programming language.
+A syntax highlighter for the Pinky scripting language.
+
+[https://pinky-lang.org/](https://pinky-lang.org/)
 
 ## Installation
 
@@ -8,13 +10,6 @@ A syntax highlighter for the Pinky programming language.
 2. Search for "vscode-pinky".
 3. Click "Install".
 
-## Screenshots
+## Screenshot
 
-![Light Modern](assets/light-modern.png)
-_Light Modern_
-
-![Monokai](assets/monokai.png)
-_Monokai_
-
-![Shades of Purple](assets/shades-of-purple.png)
-_Shades of Purple_
+![Light Modern](assets/image.png)
