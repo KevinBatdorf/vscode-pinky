@@ -2,7 +2,7 @@
   "name": "vscode-pinky",
   "displayName": "Pinky Syntax Highlighter",
   "description": "A syntax highlighter for the pinky scripting language",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "icon": "icon.png",
   "publisher": "kevinbatdorf",
   "pricing": "Free",

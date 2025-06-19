@@ -4,6 +4,10 @@ All notable changes to the "vscode-pinky" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.0.7] - 2025-06-19
+
+- Added elif to the keyword.control scope
+
 ## [1.0.6] - 2025-06-17
 
 - Updated the description to refer to Pinky as a scripting language
